@@ -1,11 +1,12 @@
 services:
-  - type: static
+  - type: web
     name: xiaowu-creator-lab
+    runtime: static
     plan: free
     buildCommand: ""
     staticPublishPath: .
     pullRequestPreviewsEnabled: false
     routes:
       - type: rewrite
-        source: /*
+        source: "/*"
         destination: /index.html
