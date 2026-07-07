@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creator Profile — 小伍创造者实验室</title>
+  <link rel="icon" href="assets/lab-bg.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <canvas class="star-dust" id="starDust" aria-hidden="true"></canvas>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__link">← 返回基地</a>
+  </nav>
+
+  <!-- ====== 第一部分：创造者身份首屏 ====== -->
+  <header class="page-header">
+    <div class="profile reveal">
+      <div class="profile__photo">
+        <div class="profile__photo-ring"></div>
+        <img src="assets/about/photo.png" alt="小伍">
+      </div>
+      <h1 class="profile__name">小伍</h1>
+      <div class="profile__badges">
+        <span class="profile__badge">AI独立创造者</span>
+        <span class="profile__badge">企业和个人AI应用落地陪跑顾问</span>
+        <span class="profile__badge profile__badge--ghost">100天AI创造者实验发起人</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====== 第二部分：创造使命 ====== -->
+  <section class="section section--compact">
+    <div class="section__container section__container--narrow">
+      <div class="mission reveal">
+        <span class="mission__label">创造使命</span>
+        <p class="mission__text">AI不是替代创造者，而是放大创造力。</p>
+        <p class="mission__sub">我相信，每个普通人都拥有创造的潜能。过去受限于工具、资源和环境。AI的出现，让一个人第一次拥有接近无限的创造杠杆。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 第三部分：三重身份 ====== -->
+  <section class="section section--alt">
+    <div class="section__container">
+      <h2 class="section__title reveal">
+        <span class="section__title-num">三重身份</span>
+        我以三种身份在创造
+      </h2>
+      <div class="card-grid card-grid--3">
+        <div class="identity-card reveal">
+          <span class="identity-card__icon">✦</span>
+          <h3 class="identity-card__title">AI独立创造者</h3>
+          <p class="identity-card__desc">用AI创造内容、作品、工具和数字资产。一个人就是一个创造团队。</p>
+          <div class="identity-card__tags">
+            <span>内容创作</span><span>视觉设计</span><span>工具开发</span>
+          </div>
+        </div>
+        <div class="identity-card reveal">
+          <span class="identity-card__icon">◫</span>
+          <h3 class="identity-card__title">企业AI应用落地陪跑顾问</h3>
+          <p class="identity-card__desc">帮企业和个人把模糊AI想法变成可验证、可落地的样品和方案。不卖概念，只做能跑的东西。</p>
+          <div class="identity-card__tags">
+            <span>AI诊断</span><span>样品验证</span><span>落地陪跑</span>
+          </div>
+        </div>
+        <div class="identity-card reveal">
+          <span class="identity-card__icon">◎</span>
+          <h3 class="identity-card__title">一人数字工厂探索者</h3>
+          <p class="identity-card__desc">用100天时间验证一个假设：普通人借助AI，可以建立属于自己的数字工厂。</p>
+          <div class="identity-card__tags">
+            <span>100天实验</span><span>作品沉淀</span><span>系统搭建</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 第四部分：创造轨迹 ====== -->
+  <section class="section">
+    <div class="section__container section__container--medium">
+      <h2 class="section__title reveal">
+        <span class="section__title-num">创造轨迹</span>
+        从探索到系统
+      </h2>
+      <div class="trajectory reveal">
+        <div class="trajectory__line"></div>
+        <div class="trajectory__nodes">
+          <div class="traj-node traj-node--past">
+            <span class="traj-node__dot"></span>
+            <div class="traj-node__body">
+              <span class="traj-node__era">过去</span>
+              <h3 class="traj-node__title">重建与探索</h3>
+              <p>离开传统路径，重新寻找属于自己的创造方式。学习AI、尝试工具、积累认知。</p>
+            </div>
+          </div>
+          <div class="traj-node traj-node--now">
+            <span class="traj-node__dot"></span>
+            <div class="traj-node__body">
+              <span class="traj-node__era">现在</span>
+              <h3 class="traj-node__title">AI创造实验</h3>
+              <p>开启100天AI创造者资产化实验。每天用AI创造内容、作品、工具，记录全部过程。</p>
+            </div>
+          </div>
+          <div class="traj-node traj-node--future">
+            <span class="traj-node__dot"></span>
+            <div class="traj-node__body">
+              <span class="traj-node__era">未来</span>
+              <h3 class="traj-node__title">数字工厂</h3>
+              <p>建立可持续运转的一人数字工厂。从作品到产品到资产，形成完整的创造闭环。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 第五部分：创造方向 ====== -->
+  <section class="section section--alt">
+    <div class="section__container">
+      <h2 class="section__title reveal">
+        <span class="section__title-num">创造方向</span>
+        五个方向，五种创造
+      </h2>
+      <div class="card-grid card-grid--5">
+        <div class="direction-card reveal">
+          <span class="direction-card__icon">✦</span>
+          <h3>AI视觉</h3>
+          <p>宇宙感、品牌、人物视觉创作</p>
+        </div>
+        <div class="direction-card reveal">
+          <span class="direction-card__icon">▶</span>
+          <h3>AI视频</h3>
+          <p>短片、分镜、视觉叙事实验</p>
+        </div>
+        <div class="direction-card reveal">
+          <span class="direction-card__icon">◫</span>
+          <h3>AI网页</h3>
+          <p>工具、Demo、数字产品开发</p>
+        </div>
+        <div class="direction-card reveal">
+          <span class="direction-card__icon">⬡</span>
+          <h3>企业AI</h3>
+          <p>诊断、样品、落地陪跑</p>
+        </div>
+        <div class="direction-card reveal">
+          <span class="direction-card__icon">◎</span>
+          <h3>AI产品</h3>
+          <p>微工具、系统、资产沉淀</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="back-top">
+    <a href="index.html" class="back-top__link">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 8H2M7 3l-5 5 5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>返回基地</span>
+    </a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="小伍创造者实验室作品星库，记录AI网页、AI视觉、AI视频、企业AI样品和AI产品实验。">
+  <title>作品星库 · 创造宇宙 — 小伍创造者实验室</title>
+  <link rel="icon" href="assets/lab-bg.jpg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <canvas class="star-dust" id="starDust" aria-hidden="true"></canvas>
+
+  <nav class="nav">
+    <a href="index.html" class="nav__link">← 返回基地</a>
+  </nav>
+
+  <header class="page-header">
+    <h1 class="page-header__title">作品星库</h1>
+    <p class="page-header__sub">每一个作品，都是一颗被点亮的创造星球。这里记录我用 AI 做过、正在做、准备做的东西。</p>
+  </header>
+
+  <main>
+    <section class="section section--compact">
+      <div class="section__container">
+        <div class="archive-dashboard reveal">
+          <div>
+            <span class="archive-dashboard__eyebrow">Creation Archive</span>
+            <h2>长期更新的 AI 创造档案</h2>
+            <p>这个页面已经从手写作品墙升级为数据驱动。以后新增作品，优先修改 <code>works-data.js</code>。</p>
+          </div>
+          <div class="archive-dashboard__stats" id="archiveStats"></div>
+        </div>
+
+        <div class="archive-filters reveal" aria-label="作品筛选">
+          <button class="archive-filter archive-filter--active" type="button" data-filter="all">全部</button>
+          <button class="archive-filter" type="button" data-filter="已完成">已完成</button>
+          <button class="archive-filter" type="button" data-filter="进行中">进行中</button>
+          <button class="archive-filter" type="button" data-filter="计划中">计划中</button>
+        </div>
+
+        <div class="star-gallery reveal" id="starGallery">
+          <svg class="star-gallery__orbits" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <ellipse cx="50" cy="45" rx="26" ry="18" fill="none" stroke="rgba(201,133,0,0.06)" stroke-width="0.07"/>
+            <ellipse cx="50" cy="45" rx="38" ry="26" fill="none" stroke="rgba(201,133,0,0.04)" stroke-width="0.05" stroke-dasharray="0.5 1.5"/>
+            <ellipse cx="50" cy="45" rx="48" ry="32" fill="none" stroke="rgba(57,135,229,0.03)" stroke-width="0.04" stroke-dasharray="0.3 2"/>
+          </svg>
+
+          <div class="sg-core">
+            <div class="sg-core__body"></div>
+            <div class="sg-core__label">小伍创造核心</div>
+            <div class="sg-core__sub">Creation Core</div>
+          </div>
+
+          <div id="planetLayer"></div>
+        </div>
+
+        <div class="works-cat reveal">
+          <h3 class="works-cat__title"><span class="works-cat__icon">◈</span> 作品档案</h3>
+          <div class="works-grid works-grid--archive" id="worksArchive"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sg-detail" id="sgDetail" aria-hidden="true">
+    <div class="sg-detail__panel" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+      <div class="sg-detail__head">
+        <h2 class="sg-detail__title" id="detailTitle"></h2>
+        <button class="sg-detail__back" type="button" id="detailClose">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M5 2L1 7l4 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          返回星库
+        </button>
+      </div>
+      <div class="sg-detail__scroll" id="detailScroll"></div>
+    </div>
+  </div>
+
+  <div class="back-top">
+    <a href="index.html" class="back-top__link">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 8H2M7 3l-5 5 5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>返回基地</span>
+    </a>
+  </div>
+
+  <script src="works-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
