@@ -17,6 +17,11 @@
       orbit: 'o1',
       position: { left: '22%', top: '22%' },
       icon: '◈',
+      cover: 'assets/lab-bg.jpg',
+      images: [
+        'assets/lab-bg.jpg'
+      ],
+      link: 'index.html',
       tools: ['Claude Code', 'DeepSeek', 'ChatGPT', 'AI视觉生成'],
       summary: '第一个动态宇宙实验室首页系统。全原生 HTML + CSS + JavaScript，零框架零依赖，视频背景 + Canvas 星尘粒子 + 全站统一宇宙环境。',
       background: '100天AI创造者资产化实验的起点。它不是普通官网，而是一个能长期承载作品、方法、实验和成长记录的数字基地。',
@@ -36,6 +41,11 @@
       orbit: 'o2',
       position: { left: '66%', top: '20%' },
       icon: '◎',
+      cover: 'assets/about/photo.png',
+      images: [
+        'assets/about/photo.png'
+      ],
+      link: 'about.html',
       tools: ['HTML', 'CSS', 'AI协作', '内容整理'],
       summary: '把个人介绍、创造使命、方向、轨迹整合成长期可展示的创造者档案。',
       background: '单纯的“关于我”页面不够承载长期成长，需要一个能解释身份、方向和方法的档案结构。',

@@ -22,6 +22,20 @@ function statusClass(status){
   return 'status--pending';
 }
 
+function safeUrl(value){
+  var url=String(value||'').trim();
+  if(!url||/^javascript:/i.test(url))return '';
+  return url;
+}
+
+function renderCover(w,className){
+  var cover=safeUrl(w.cover);
+  if(cover){
+    return '<img src="'+escapeHtml(cover)+'" alt="'+escapeHtml(w.name)+'" loading="lazy" decoding="async" onerror="this.parentElement.classList.add(\'is-missing\');this.remove()">';
+  }
+  return '<span class="'+className+'">'+escapeHtml(w.icon||'◈')+'</span>';
+}
+
 // ==========================================================
 // 首页基地状态 — 由作品数据自动统计
 // ==========================================================
@@ -81,7 +95,7 @@ function statusClass(status){
     archive.innerHTML=list.map(function(w){
       return '<article class="work-card" data-work-id="'+escapeHtml(w.id)+'">'+
         '<button class="work-card__button" type="button" data-work-id="'+escapeHtml(w.id)+'">'+
-          '<span class="work-card__thumb"><span class="work-card__thumb-placeholder"><span class="work-card__thumb-icon">'+escapeHtml(w.icon||'◈')+'</span></span></span>'+
+          '<span class="work-card__thumb"><span class="work-card__thumb-placeholder">'+renderCover(w,'work-card__thumb-icon')+'</span></span>'+
           '<span class="work-card__body">'+
             '<span class="work-card__tag">'+escapeHtml(w.type)+'</span>'+
             '<span class="work-card__title">'+escapeHtml(w.name)+'</span>'+
@@ -98,6 +112,13 @@ function statusClass(status){
     if(!w)return;
     detailTitle.textContent=w.name;
     var toolHtml=(w.tools||[]).map(function(t){return '<span class="sg-detail__tool">'+escapeHtml(t)+'</span>'}).join('');
+    var imageHtml=(w.images||[]).map(function(src,index){
+      var image=safeUrl(src);
+      if(!image)return '';
+      return '<figure class="sg-detail__shot"><img src="'+escapeHtml(image)+'" alt="'+escapeHtml(w.name)+' 截图 '+(index+1)+'" loading="lazy" decoding="async"></figure>';
+    }).join('');
+    var link=safeUrl(w.link);
+    var linkHtml=link?'<a class="sg-detail__link" href="'+escapeHtml(link)+'" target="_blank" rel="noopener noreferrer">打开作品</a>':'';
     var sections=[
       ['创造背景',w.background],
       ['制作过程',w.process],
@@ -106,10 +127,12 @@ function statusClass(status){
       ['下一步',w.next]
     ].filter(function(item){return item[1]});
     detailScroll.innerHTML=
-      '<div class="sg-detail__cover"><span class="sg-detail__cover-icon">'+escapeHtml(w.icon||'◈')+'</span></div>'+
+      '<div class="sg-detail__cover">'+renderCover(w,'sg-detail__cover-icon')+'</div>'+
       '<div class="sg-detail__meta"><span class="sg-detail__tag">'+escapeHtml(w.type)+'</span><span class="sg-detail__date">'+escapeHtml(w.date)+'</span><span class="sg-detail__status '+statusClass(w.status)+'">'+escapeHtml(w.status)+'</span></div>'+
       '<p class="sg-detail__summary">'+escapeHtml(w.summary)+'</p>'+
+      linkHtml+
       '<div class="sg-detail__tools">'+toolHtml+'</div>'+
+      (imageHtml?'<div class="sg-detail__gallery"><h4>作品截图</h4><div class="sg-detail__shots">'+imageHtml+'</div></div>':'')+
       sections.map(function(item){return '<div class="sg-detail__section"><h4>'+escapeHtml(item[0])+'</h4><p>'+escapeHtml(item[1])+'</p></div>'}).join('');
     detailScroll.scrollTop=0;
     detail.classList.add('sg-detail--open');

@@ -51,10 +51,40 @@ http://localhost:5173
 - `date`：日期或“持续更新”
 - `status`：只能用 `已完成`、`进行中`、`计划中`
 - `summary`：一句话说明
+- `cover`：作品封面图路径，例如 `assets/works/my-work-cover.jpg`
+- `images`：详情页多张截图路径
+- `link`：作品链接，可以是站内页面或外部网址
 - `tools`：用过的工具列表
 - `background`、`process`、`result`、`thought`、`next`：详情弹窗内容
 
 保存后刷新 `works.html`，作品星球、作品卡片、筛选和详情会自动更新。
+
+## 作品图片放哪里
+
+把作品封面图和截图放到：
+
+```text
+assets/works/
+```
+
+推荐命名：
+
+```text
+assets/works/my-work-cover.jpg
+assets/works/my-work-01.jpg
+assets/works/my-work-02.jpg
+```
+
+然后在 `works-data.js` 里这样写：
+
+```js
+cover: 'assets/works/my-work-cover.jpg',
+images: [
+  'assets/works/my-work-01.jpg',
+  'assets/works/my-work-02.jpg'
+],
+link: 'https://example.com'
+```
 
 ## 当前设计原则
 
