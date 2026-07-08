@@ -132,6 +132,8 @@ function renderCover(w,className){
     }).join('');
     var link=safeUrl(w.link);
     var linkHtml=link?'<a class="sg-detail__link" href="'+escapeHtml(link)+'" target="_blank" rel="noopener noreferrer">打开作品</a>':'';
+    var video=safeUrl(w.video);
+    var videoHtml=video?'<div class="sg-detail__video"><video controls preload="metadata" poster="'+escapeHtml(safeUrl(w.cover))+'"><source src="'+escapeHtml(video)+'" type="video/mp4">当前浏览器不支持视频播放。</video></div>':'';
     var sections=[
       ['创造背景',w.background],
       ['制作过程',w.process],
@@ -141,6 +143,7 @@ function renderCover(w,className){
     ].filter(function(item){return item[1]});
     detailScroll.innerHTML=
       '<div class="sg-detail__cover">'+renderCover(w,'sg-detail__cover-icon')+'</div>'+
+      videoHtml+
       '<div class="sg-detail__meta"><span class="sg-detail__tag">'+escapeHtml(w.type)+'</span><span class="sg-detail__date">'+escapeHtml(w.date)+'</span><span class="sg-detail__status '+statusClass(w.status)+'">'+escapeHtml(w.status)+'</span></div>'+
       '<p class="sg-detail__summary">'+escapeHtml(w.summary)+'</p>'+
       linkHtml+

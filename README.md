@@ -53,6 +53,7 @@ http://localhost:5173
 - `summary`：一句话说明
 - `cover`：作品封面图路径，例如 `assets/works/my-work-cover.jpg`
 - `images`：详情页多张截图路径
+- `video`：本地 MP4 视频路径，例如 `assets/works/my-work-demo.mp4`
 - `link`：作品链接，可以是站内页面或外部网址
 - `tools`：用过的工具列表
 - `background`、`process`、`result`、`thought`、`next`：详情弹窗内容
@@ -83,8 +84,11 @@ images: [
   'assets/works/my-work-01.jpg',
   'assets/works/my-work-02.jpg'
 ],
+video: 'assets/works/my-work-demo.mp4',
 link: 'https://example.com'
 ```
+
+视频建议使用 MP4 格式。文件太大会影响加载速度，展示用短视频建议控制在 30-90 秒。
 
 ## 当前设计原则
 
