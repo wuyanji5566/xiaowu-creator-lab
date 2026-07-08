@@ -80,7 +80,12 @@ function renderCover(w,className){
 
   function render(filter){
     var active=filter||'all';
-    var list=works.filter(function(w){return active==='all'||w.status===active});
+    var list=works.filter(function(w){return active==='all'||w.status===active}).slice().sort(function(a,b){
+      var aReal=safeUrl(a.cover).indexOf('assets/works/')===0?1:0;
+      var bReal=safeUrl(b.cover).indexOf('assets/works/')===0?1:0;
+      if(aReal!==bReal)return bReal-aReal;
+      return 0;
+    });
 
     planetLayer.innerHTML=list.map(function(w){
       var left=w.position&&w.position.left?w.position.left:'50%';

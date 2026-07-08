@@ -129,6 +129,145 @@
       result: '已完成概念设计，等待第一个可用原型。',
       thought: '最好的早期产品不是大而全，而是小而准。',
       next: '完成命理微工具的第一个可用版本，作为站内第一个真正产品样品。'
+    },
+    {
+      id: 'xuanji-destiny-os',
+      name: '玄机命理会馆',
+      type: 'AI命理产品',
+      category: 'product',
+      date: '2026.07',
+      status: '已完成',
+      level: 'L',
+      orbit: 'o2',
+      position: { left: '18%', top: '76%' },
+      icon: '◎',
+      cover: 'assets/works/xuanji-destiny-os-cover.png',
+      images: [
+        'assets/works/xuanji-destiny-os-cover.png'
+      ],
+      link: 'https://xuanji-mingli-huiguan-4xi3.onrender.com',
+      tools: ['AI产品设计', '命理知识结构化', '前端页面', 'Render部署'],
+      summary: '融合八字、紫微、星座、MBTI 的 AI 个人命理解读产品首页。',
+      background: '把传统命理与 AI 产品化表达结合，验证个人认知类产品是否能形成清晰的展示和转化路径。',
+      process: '先设计产品定位和四维系统，再完成首页视觉、报告入口、案例展示和部署验证。',
+      result: '完成可公开访问的 AI 命理产品展示页，形成第一个可展示的个人认知类产品样品。',
+      thought: '命理产品不能只做玄学包装，必须把结构化分析、报告体验和行动建议做清楚。',
+      next: '继续补完整报告页、输入流程和报告案例。'
+    },
+    {
+      id: 'lvyu-chanyuan',
+      name: '律御禅园',
+      type: '东方关系产品',
+      category: 'product',
+      date: '2026.07',
+      status: '进行中',
+      level: 'M',
+      orbit: 'o3',
+      position: { left: '82%', top: '74%' },
+      icon: '◫',
+      cover: 'assets/works/lvyu-chanyuan-cover.png',
+      images: [
+        'assets/works/lvyu-chanyuan-cover.png'
+      ],
+      tools: ['AI产品设计', '移动端页面', '八字合婚', '关系分析'],
+      summary: '面向移动端的八字合婚与关系能量分析产品样品。',
+      background: '测试东方关系咨询类产品能否用移动端页面承载更轻量、更温和的用户体验。',
+      process: '围绕合婚测算、服务项目、报告预览和底部导航搭建移动端体验。',
+      result: '完成移动端首页样品，视觉风格更偏东方、温润、咨询服务型。',
+      thought: '这类产品的关键不是堆概念，而是让用户感觉“可信、清楚、愿意继续看”。',
+      next: '补充合婚表单、报告结果页和服务项目说明。'
+    },
+    {
+      id: 'enterprise-ai-factory',
+      name: '企业AI数字工厂',
+      type: '企业AI样品',
+      category: 'enterprise',
+      date: '2026.07',
+      status: '已完成',
+      level: 'L',
+      orbit: 'o4',
+      position: { left: '50%', top: '82%' },
+      icon: '◈',
+      cover: 'assets/works/enterprise-ai-factory-cover.png',
+      images: [
+        'assets/works/enterprise-ai-factory-cover.png'
+      ],
+      tools: ['AI诊断框架', '前端页面', '企业服务设计', '样品验证'],
+      summary: '帮助企业 10 分钟找出最值得做的第一个 AI 项目的诊断型产品页。',
+      background: '很多企业想做 AI，但第一步不知道选什么场景。这个样品把“诊断、验证、成交路径”做成一个清晰入口。',
+      process: '设计企业AI诊断流程，突出切入方向、样品验证和成交路径，再落成可展示页面。',
+      result: '完成企业AI诊断样品页，可作为企业AI落地服务的第一个展示案例。',
+      thought: '企业AI落地的成交前提，是让客户先看见一个小而清楚的第一步。',
+      next: '接入诊断问卷和自动报告生成。'
+    },
+    {
+      id: 'football-ai-dashboard',
+      name: '先知足球 AI 量化大盘',
+      type: 'AI数据产品',
+      category: 'product',
+      date: '2026.07',
+      status: '进行中',
+      level: 'M',
+      orbit: 'o5',
+      position: { left: '30%', top: '88%' },
+      icon: '⬡',
+      cover: 'assets/works/football-ai-dashboard-cover.png',
+      images: [
+        'assets/works/football-ai-dashboard-cover.png'
+      ],
+      tools: ['AI数据分析', '体育数据产品', 'Dashboard设计', '前端页面'],
+      summary: '基于足球数据和 AI 模型概念设计的量化分析大盘。',
+      background: '探索体育赛事数据、AI预测和可视化大盘如何组合成一个专业感强的产品入口。',
+      process: '围绕预测准确率、赛事覆盖、模型同步和数据服务能力设计首页指标。',
+      result: '完成深色科技风的数据产品首屏，适合继续扩展成分析终端。',
+      thought: '数据产品第一眼必须建立可信度，指标、模型说明和风险声明都要同时存在。',
+      next: '补充真实数据来源、分析方法页和比赛详情页。'
+    },
+    {
+      id: 'deep-sleep-lab',
+      name: 'Deep Sleep Lab',
+      type: 'AI疗愈应用',
+      category: 'product',
+      date: '2026.07',
+      status: '进行中',
+      level: 'M',
+      orbit: 'o1',
+      position: { left: '70%', top: '88%' },
+      icon: '✦',
+      cover: 'assets/works/deep-sleep-lab-cover.png',
+      images: [
+        'assets/works/deep-sleep-lab-cover.png'
+      ],
+      tools: ['移动端产品设计', '情绪状态选择', '睡眠仪式', '声音场景'],
+      summary: '面向睡前放松、情绪安定和声音场景的移动端应用样品。',
+      background: '测试 AI 时代的轻疗愈应用能否通过仪式感、情绪识别和声音内容形成日常使用场景。',
+      process: '设计深睡模式、情绪状态、呼吸建议、睡前仪式和声音场景模块。',
+      result: '完成移动端首屏视觉样品，适合继续扩展成交互原型。',
+      thought: '疗愈类产品的重点是安全感和陪伴感，界面应该降低刺激而不是制造焦虑。',
+      next: '补充声音播放、睡前流程和打卡记录。'
+    },
+    {
+      id: 'yuao-sports-admin',
+      name: '宇奥体育运营管理后台',
+      type: '运营管理系统',
+      category: 'web',
+      date: '2026.07',
+      status: '已完成',
+      level: 'M',
+      orbit: 'o2',
+      position: { left: '8%', top: '88%' },
+      icon: '▣',
+      cover: 'assets/works/yuao-sports-admin-cover.png',
+      images: [
+        'assets/works/yuao-sports-admin-cover.png'
+      ],
+      tools: ['管理后台', '课程招生', '考勤扣课', '学习反馈'],
+      summary: '面向体育培训机构的运营管理后台登录与功能入口样品。',
+      background: '体育培训机构需要把课程、班级、报名、考勤、课时和反馈集中管理，降低日常运营成本。',
+      process: '先做 Mock 演示版本，聚焦课程招生、考勤扣课和学习反馈三个核心流程。',
+      result: '完成可演示的后台入口，适合继续扩展成 MVP 管理系统。',
+      thought: '后台产品不需要炫技，关键是让机构看清“能管什么、怎么管、能省多少事”。',
+      next: '继续补充课程、学员、订单和考勤模块。'
     }
   ];
 

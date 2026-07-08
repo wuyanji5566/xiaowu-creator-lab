@@ -8,7 +8,7 @@
   <link rel="icon" href="assets/lab-bg.jpg">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="body--works">
 
   <canvas class="star-dust" id="starDust" aria-hidden="true"></canvas>
 
@@ -40,6 +40,11 @@
           <button class="archive-filter" type="button" data-filter="计划中">计划中</button>
         </div>
 
+        <div class="works-cat reveal">
+          <h3 class="works-cat__title"><span class="works-cat__icon">◈</span> 作品档案</h3>
+          <div class="works-grid works-grid--archive" id="worksArchive"></div>
+        </div>
+
         <div class="star-gallery reveal" id="starGallery">
           <svg class="star-gallery__orbits" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
             <ellipse cx="50" cy="45" rx="26" ry="18" fill="none" stroke="rgba(201,133,0,0.06)" stroke-width="0.07"/>
@@ -54,11 +59,6 @@
           </div>
 
           <div id="planetLayer"></div>
-        </div>
-
-        <div class="works-cat reveal">
-          <h3 class="works-cat__title"><span class="works-cat__icon">◈</span> 作品档案</h3>
-          <div class="works-grid works-grid--archive" id="worksArchive"></div>
         </div>
       </div>
     </section>
