@@ -268,6 +268,126 @@
       result: '完成可演示的后台入口，适合继续扩展成 MVP 管理系统。',
       thought: '后台产品不需要炫技，关键是让机构看清“能管什么、怎么管、能省多少事”。',
       next: '继续补充课程、学员、订单和考勤模块。'
+    },
+    {
+      id: 'kids-toy-brand-film',
+      name: '儿童玩具品牌宣传片',
+      type: '企业产品宣传片',
+      category: 'video',
+      date: '2026.07',
+      status: '已完成',
+      level: 'M',
+      orbit: 'o3',
+      position: { left: '16%', top: '94%' },
+      icon: '▶',
+      cover: 'assets/works/kids-toy-brand-film-cover.png',
+      images: [
+        'assets/works/kids-toy-brand-film-cover.png'
+      ],
+      video: 'assets/works/kids-toy-brand-film.mp4',
+      tools: ['AI视频生成', '品牌脚本', '产品叙事', '剪辑合成'],
+      summary: '面向儿童玩具/成长陪伴场景的企业产品营销宣传片。',
+      background: '企业产品宣传不只是展示物品，更要把使用场景、情绪价值和品牌信任感讲出来。',
+      process: '先确定儿童成长、家庭陪伴和玩具互动的核心画面，再用 AI 生成视频素材并剪成完整宣传片。',
+      result: '完成一条可播放的产品营销宣传片，适合用于企业展示、私域介绍和产品提案。',
+      thought: 'AI视频适合快速验证宣传片方向，尤其适合先做样片，再决定是否继续精修成正式广告。',
+      next: '继续补充品牌LOGO、字幕节奏和不同平台比例版本。'
+    },
+    {
+      id: 'cora-creator-business-os',
+      name: 'CORA 创作者商业系统网页',
+      type: 'AI网页作品',
+      category: 'web',
+      date: '2026.07',
+      status: '已完成',
+      level: 'L',
+      orbit: 'o4',
+      position: { left: '38%', top: '96%' },
+      icon: '◈',
+      cover: 'assets/works/cora-creator-business-os-cover.png',
+      images: [
+        'assets/works/cora-creator-business-os-cover.png'
+      ],
+      video: 'assets/works/cora-creator-business-os-demo.mp4',
+      tools: ['网页设计', 'AI视觉', '产品定位', '前端实现'],
+      summary: '一个把创作者内容、产品和服务资产化的商业系统网页样品。',
+      background: '创作者不只需要发布内容，也需要把内容沉淀为可展示、可销售、可持续复用的数字资产。',
+      process: '围绕 Creator Business OS 的概念，设计深色宇宙感首页、核心产品模块和商业转化入口。',
+      result: '完成可演示的网页作品，并配套了页面录屏视频，能展示完整视觉和交互方向。',
+      thought: '网页本身也是产品样品。它能让一个抽象商业系统先以可观看、可理解的方式存在。',
+      next: '继续补充模块详情页、产品说明和实际创作者案例。'
+    },
+    {
+      id: 'yafe-fighting-era-brand-film',
+      name: '宇奥格斗时代宣传片',
+      type: '企业品牌宣传片',
+      category: 'video',
+      date: '2026.07',
+      status: '已完成',
+      level: 'L',
+      orbit: 'o5',
+      position: { left: '60%', top: '96%' },
+      icon: '▶',
+      cover: 'assets/works/yafe-fighting-era-brand-film-cover.png',
+      images: [
+        'assets/works/yafe-fighting-era-brand-film-cover.png'
+      ],
+      video: 'assets/works/yafe-fighting-era-brand-film.mp4',
+      tools: ['AI视频生成', '赛事视觉', '品牌包装', '剪辑合成'],
+      summary: '为格斗赛事/体育品牌打造的高燃视觉宣传片。',
+      background: '体育和格斗类品牌需要强烈的现场感、仪式感和视觉冲击力，宣传片比静态海报更容易建立气势。',
+      process: '围绕八角笼、灯光、观众、赛事大屏和品牌标识构建画面，用 AI 视频完成氛围化表达。',
+      result: '完成一条具有赛事感和商业包装感的品牌宣传视频。',
+      thought: 'AI视频可以快速模拟大型赛事视觉，这对早期品牌提案和招商展示很有价值。',
+      next: '继续补充口播版、短视频版和赞助商露出版。'
+    },
+    {
+      id: 'speaker-product-promo-film',
+      name: '音响产品营销宣传片',
+      type: '企业产品宣传片',
+      category: 'video',
+      date: '2026.07',
+      status: '已完成',
+      level: 'M',
+      orbit: 'o1',
+      position: { left: '82%', top: '94%' },
+      icon: '▶',
+      cover: 'assets/works/speaker-product-promo-film-cover.png',
+      images: [
+        'assets/works/speaker-product-promo-film-cover.png'
+      ],
+      video: 'assets/works/speaker-product-promo-film.mp4',
+      tools: ['AI视频生成', '产品讲解', '场景包装', '剪辑合成'],
+      summary: '围绕音响产品卖点、空间氛围和讲解场景制作的产品营销宣传片。',
+      background: '硬件产品需要把质感、使用场景和核心卖点讲清楚，单张图片往往不够表达产品价值。',
+      process: '构建专业音响展厅、人物讲解和产品特写画面，用视频方式增强信任感和销售表达。',
+      result: '完成一条适合用于产品介绍、招商演示和企业宣传的短视频样片。',
+      thought: '产品视频的重点不是炫画面，而是让客户快速理解“这个东西为什么值得买”。',
+      next: '继续补充具体品牌名、参数字幕和成交型结尾。'
+    },
+    {
+      id: 'waterproof-wood-product-film',
+      name: '防水木材产品演示片',
+      type: '企业产品宣传片',
+      category: 'video',
+      date: '2026.07',
+      status: '已完成',
+      level: 'M',
+      orbit: 'o2',
+      position: { left: '94%', top: '88%' },
+      icon: '▶',
+      cover: 'assets/works/waterproof-wood-product-film-cover.png',
+      images: [
+        'assets/works/waterproof-wood-product-film-cover.png'
+      ],
+      video: 'assets/works/waterproof-wood-product-film.mp4',
+      tools: ['AI视频生成', '产品对比', '材质演示', '卖点提炼'],
+      summary: '用水滴对比画面展示木材防水性能和产品卖点的演示短片。',
+      background: '材料类产品很适合用视频表达，因为性能差异需要被看见，尤其是防水、防污、耐用这类卖点。',
+      process: '设计水滴落在木材表面的对比画面，用直观视觉展示普通材质和功能材质的差异。',
+      result: '完成一条简洁直接的产品性能演示视频，可作为企业产品页或销售素材。',
+      thought: '产品演示片不一定要复杂，越直观越容易让客户记住核心卖点。',
+      next: '继续补充品牌信息、应用场景和前后对比字幕。'
     }
   ];
 
