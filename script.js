@@ -44,10 +44,18 @@ function renderCover(w,className){
   var metricWorks=document.getElementById('metricWorks');
   var metricDone=document.getElementById('metricDone');
   var metricProgress=document.getElementById('metricProgress');
+  var experimentDay=document.getElementById('experimentDay');
   if(!metricWorks||!metricDone||!metricProgress)return;
   metricWorks.textContent=works.length;
   metricDone.textContent=works.filter(function(w){return w.status==='已完成'}).length;
   metricProgress.textContent=works.filter(function(w){return w.status==='进行中'}).length;
+  if(experimentDay){
+    var start=new Date(2026,6,7);
+    var today=new Date();
+    var localToday=new Date(today.getFullYear(),today.getMonth(),today.getDate());
+    var day=Math.max(1,Math.floor((localToday-start)/86400000)+1);
+    experimentDay.textContent='Day '+day+' · 数字基地持续生长';
+  }
 })();
 
 // ==========================================================
