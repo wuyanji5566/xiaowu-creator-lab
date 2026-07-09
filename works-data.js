@@ -201,6 +201,29 @@
       next: '接入诊断问卷和自动报告生成。'
     },
     {
+      id: 'enterprise-ai-delivery-system',
+      name: '星宇AI数字工厂',
+      type: '企业AI落地系统',
+      category: 'enterprise',
+      date: '2026.07',
+      status: '已完成',
+      level: 'L',
+      orbit: 'o5',
+      position: { left: '66%', top: '84%' },
+      icon: '◈',
+      cover: 'assets/works/enterprise-ai-delivery-system-cover.png',
+      images: [
+        'assets/works/enterprise-ai-delivery-system-cover.png'
+      ],
+      tools: ['AI诊断', '样品库', 'MVP路径', '企业AI落地'],
+      summary: '企业AI诊断样品的升级版，帮助企业找到最适合优先落地的 AI 应用场景，并生成可成交的诊断报告。',
+      background: '企业客户通常不是缺少 AI 概念，而是不知道第一个应用应该落在哪里、先做什么样品、预算和验证路径如何安排。这个升级版把诊断、优先级、样品建议和落地路径整合成一个更完整的 AI 交付入口。',
+      process: '围绕“诊断 → 样品 → MVP → 路径”的落地链路设计产品首页，突出营销获客、效率自动化、知识库、MVP系统和团队培训等项目雷达维度，并用 AI 成熟度评分帮助企业快速判断优先级。',
+      result: '形成一套更像真实企业服务产品的展示样品：企业可以从 AI 诊断进入，获得优先级判断、样品验证建议和下一步成交动作。',
+      thought: '企业AI落地不能只讲技术能力，必须把“先做哪个场景、为什么先做、怎么验证、如何成交”讲清楚。',
+      next: '继续补充登录后报告保存、样品上传、真实 API 生成建议和服务方案报价模块。'
+    },
+    {
       id: 'football-ai-dashboard',
       name: '先知足球 AI 量化大盘',
       type: 'AI数据产品',
