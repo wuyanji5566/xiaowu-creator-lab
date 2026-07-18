@@ -411,6 +411,54 @@
       result: '完成一条简洁直接的产品性能演示视频，可作为企业产品页或销售素材。',
       thought: '产品演示片不一定要复杂，越直观越容易让客户记住核心卖点。',
       next: '继续补充品牌信息、应用场景和前后对比字幕。'
+    },
+    {
+      id: 'knowledge-base-system',
+      name: '小伍知识库系统',
+      type: 'AI知识系统',
+      category: 'system',
+      date: '2026.07',
+      status: '已完成',
+      level: 'L',
+      orbit: 'o3',
+      position: { left: '22%', top: '98%' },
+      icon: '◎',
+      cover: 'assets/works/knowledge-base-system-cover.png',
+      images: [
+        'assets/works/knowledge-base-system-cover.png'
+      ],
+      video: 'assets/works/knowledge-base-system-demo.mp4',
+      tools: ['知识库系统', 'AI提炼', '碎片信息管理', '知识节点'],
+      summary: '用于存储碎片化信息、知识经验，并通过 AI 继续提炼和沉淀的个人知识库系统。',
+      background: '日常创作和学习会产生大量碎片化信息，如果只是散落在聊天记录、笔记和文件里，很难复用。这个系统的目标，是把零散经验变成可积累、可检索、可继续提炼的知识资产。',
+      process: '围绕“知识宇宙、星图列表、时空隧道、知识收集盒”等模块搭建结构，把知识节点作为最小单元，再用 AI 辅助摘要、打标签和整理关系。',
+      result: '完成了一个可演示的知识库界面，可以承载碎片信息、经验记录和 AI 提炼后的知识节点。',
+      thought: '知识库真正的价值不是存东西，而是让信息被再次使用。对个人创造者来说，知识沉淀就是长期复利。',
+      next: '继续补充搜索、标签、节点关联和自动提炼流程，让它成为日常创作系统的底层仓库。'
+    },
+    {
+      id: 'multi-agent-employees',
+      name: '多 Agent 虚拟员工系统',
+      type: 'AI Agent 工作流',
+      category: 'system',
+      date: '2026.07',
+      status: '已完成',
+      level: 'L',
+      orbit: 'o4',
+      position: { left: '46%', top: '100%' },
+      icon: '◫',
+      cover: 'assets/works/multi-agent-employees-cover.png',
+      images: [
+        'assets/works/multi-agent-employees-cover.png'
+      ],
+      video: 'assets/works/multi-agent-employees-demo.mp4',
+      tools: ['多Agent', '任务分工', '工作流编排', '复杂任务执行'],
+      summary: '由多个 AI Agent 员工协作，帮助我拆解、分工和执行复杂任务的虚拟团队系统。',
+      background: '一个人做项目时，真正困难的不是单点执行，而是同时处理调研、文案、设计、技术、运营等多条任务线。多 Agent 员工系统的目标，是把复杂任务拆给不同角色协作完成。',
+      process: '设计不同虚拟员工角色，并用任务中心、知识库、文本中心、技能中心、消息网关和实时日志来组织协作流程。',
+      result: '完成了一个可演示的多 Agent 工作台，可以展示 Agent 员工分工、任务流转、执行状态和系统运行日志。',
+      thought: '未来个人创业者不一定先雇真实团队，可以先搭建一套 AI 虚拟员工系统，把重复性和复杂协作任务交给 Agent。',
+      next: '继续接入真实任务数据、自动派单、执行结果回传和项目复盘，让它从演示系统变成日常工作助手。'
     }
   ];
 
