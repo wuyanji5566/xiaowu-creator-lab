@@ -83,6 +83,7 @@ function renderCover(w,className,useThumb,priority){
   var detailTitle=document.getElementById('detailTitle');
   var detailClose=document.getElementById('detailClose');
   var filters=document.querySelectorAll('.archive-filter');
+  var renderToken=0;
 
   function renderStats(){
     if(!stats)return;
@@ -98,6 +99,8 @@ function renderCover(w,className,useThumb,priority){
   }
 
   function render(filter){
+    renderToken++;
+    var token=renderToken;
     var active=filter||'all';
     var list=works.filter(function(w){return active==='all'||w.status===active}).slice().sort(function(a,b){
       var aReal=safeUrl(a.cover).indexOf('assets/works/')===0?1:0;
@@ -106,7 +109,7 @@ function renderCover(w,className,useThumb,priority){
       return 0;
     });
 
-    planetLayer.innerHTML=list.map(function(w){
+    var planetHtml=list.map(function(w){
       var left=w.position&&w.position.left?w.position.left:'50%';
       var top=w.position&&w.position.top?w.position.top:'50%';
       return '<button class="sg-planet sg-planet--'+escapeHtml(w.level||'M')+' sg-planet--'+escapeHtml(w.orbit||'o1')+'" style="left:'+escapeHtml(left)+';top:'+escapeHtml(top)+'" type="button" data-work-id="'+escapeHtml(w.id)+'">'+
@@ -115,8 +118,14 @@ function renderCover(w,className,useThumb,priority){
         '<span class="sg-planet__info"><span class="sg-planet__name">'+escapeHtml(w.name)+'</span><span class="sg-planet__tag">'+escapeHtml(w.type)+'</span><span class="sg-planet__desc">'+escapeHtml(w.summary)+'</span></span>'+
       '</button>';
     }).join('');
+    if(isMobile){
+      planetLayer.innerHTML='';
+      setTimeout(function(){if(token===renderToken)planetLayer.innerHTML=planetHtml},700);
+    }else{
+      planetLayer.innerHTML=planetHtml;
+    }
 
-    archive.innerHTML=list.map(function(w,index){
+    function cardHtml(w,index){
       return '<article class="work-card" data-work-id="'+escapeHtml(w.id)+'">'+
         '<button class="work-card__button" type="button" data-work-id="'+escapeHtml(w.id)+'">'+
           '<span class="work-card__thumb"><span class="work-card__thumb-placeholder">'+renderCover(w,'work-card__thumb-icon',true,index<4)+'</span></span>'+
@@ -128,7 +137,16 @@ function renderCover(w,className,useThumb,priority){
           '</span>'+
         '</button>'+
       '</article>';
-    }).join('');
+    }
+    if(isMobile&&list.length>8){
+      archive.innerHTML=list.slice(0,8).map(cardHtml).join('');
+      setTimeout(function(){
+        if(token!==renderToken)return;
+        archive.insertAdjacentHTML('beforeend',list.slice(8).map(function(w,index){return cardHtml(w,index+8)}).join(''));
+      },250);
+    }else{
+      archive.innerHTML=list.map(cardHtml).join('');
+    }
   }
 
   function openDetail(id){
