@@ -28,10 +28,21 @@ function safeUrl(value){
   return url;
 }
 
-function renderCover(w,className){
+function thumbUrl(w){
   var cover=safeUrl(w.cover);
-  if(cover){
-    return '<img src="'+escapeHtml(cover)+'" alt="'+escapeHtml(w.name)+'" loading="lazy" decoding="async" onerror="this.parentElement.classList.add(\'is-missing\');this.remove()">';
+  var match=cover.match(/^assets\/works\/([^/]+)\.(png|jpe?g|webp)$/i);
+  if(!match)return cover;
+  return 'assets/works/thumbs/'+match[1]+'.webp';
+}
+
+function renderCover(w,className,useThumb,priority){
+  var cover=safeUrl(w.cover);
+  var src=useThumb?thumbUrl(w):cover;
+  if(src){
+    var loading=priority?'eager':'lazy';
+    var fetchPriority=priority?' fetchpriority="high"':'';
+    var fallback=useThumb&&cover&&src!==cover?' data-fallback-src="'+escapeHtml(cover)+'"':'';
+    return '<img src="'+escapeHtml(src)+'"'+fallback+' alt="'+escapeHtml(w.name)+'" loading="'+loading+'" decoding="async"'+fetchPriority+' onerror="if(this.dataset.fallbackSrc&&this.src.indexOf(this.dataset.fallbackSrc)===-1){this.src=this.dataset.fallbackSrc;delete this.dataset.fallbackSrc}else{this.parentElement.classList.add(\'is-missing\');this.remove()}">';
   }
   return '<span class="'+className+'">'+escapeHtml(w.icon||'◈')+'</span>';
 }
@@ -105,10 +116,10 @@ function renderCover(w,className){
       '</button>';
     }).join('');
 
-    archive.innerHTML=list.map(function(w){
+    archive.innerHTML=list.map(function(w,index){
       return '<article class="work-card" data-work-id="'+escapeHtml(w.id)+'">'+
         '<button class="work-card__button" type="button" data-work-id="'+escapeHtml(w.id)+'">'+
-          '<span class="work-card__thumb"><span class="work-card__thumb-placeholder">'+renderCover(w,'work-card__thumb-icon')+'</span></span>'+
+          '<span class="work-card__thumb"><span class="work-card__thumb-placeholder">'+renderCover(w,'work-card__thumb-icon',true,index<4)+'</span></span>'+
           '<span class="work-card__body">'+
             '<span class="work-card__tag">'+escapeHtml(w.type)+'</span>'+
             '<span class="work-card__title">'+escapeHtml(w.name)+'</span>'+
@@ -142,7 +153,7 @@ function renderCover(w,className){
       ['下一步',w.next]
     ].filter(function(item){return item[1]});
     detailScroll.innerHTML=
-      '<div class="sg-detail__cover">'+renderCover(w,'sg-detail__cover-icon')+'</div>'+
+      '<div class="sg-detail__cover">'+renderCover(w,'sg-detail__cover-icon',false,true)+'</div>'+
       videoHtml+
       '<div class="sg-detail__meta"><span class="sg-detail__tag">'+escapeHtml(w.type)+'</span><span class="sg-detail__date">'+escapeHtml(w.date)+'</span><span class="sg-detail__status '+statusClass(w.status)+'">'+escapeHtml(w.status)+'</span></div>'+
       '<p class="sg-detail__summary">'+escapeHtml(w.summary)+'</p>'+

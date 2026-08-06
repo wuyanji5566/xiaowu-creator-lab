@@ -395,6 +395,8 @@ svg{display:block}
 .work-card{
   background:rgba(13,17,23,0.50);border:0.5px solid rgba(255,255,255,0.05);border-radius:14px;
   overflow:hidden;
+  content-visibility:auto;
+  contain-intrinsic-size:360px 420px;
   transition:transform 0.4s var(--ease-out),border-color 0.4s var(--ease-out),box-shadow 0.4s var(--ease-out);
 }
 .work-card:hover{
