@@ -459,6 +459,100 @@
       result: '完成了一个可演示的多 Agent 工作台，可以展示 Agent 员工分工、任务流转、执行状态和系统运行日志。',
       thought: '未来个人创业者不一定先雇真实团队，可以先搭建一套 AI 虚拟员工系统，把重复性和复杂协作任务交给 Agent。',
       next: '继续接入真实任务数据、自动派单、执行结果回传和项目复盘，让它从演示系统变成日常工作助手。'
+    },
+    {
+      id: 'jack-ai-voice-assistant',
+      name: '杰克 AI 语音助手',
+      type: 'AI办公助手',
+      category: 'product',
+      date: '2026.08',
+      status: '已完成',
+      level: 'M',
+      orbit: 'o1',
+      position: { left: '12%', top: '102%' },
+      icon: '✦',
+      cover: 'assets/works/jack-ai-voice-assistant-cover.png',
+      images: [
+        'assets/works/jack-ai-voice-assistant-cover.png'
+      ],
+      tools: ['AI语音助手', '语音控制电脑', '智能办公', '产品视觉'],
+      summary: '面向电脑操作和办公场景的 AI 语音助手概念作品，用“语音控制电脑、智能办公”建立产品第一印象。',
+      background: 'AI 助手如果只停留在聊天窗口里，用户感知会比较弱。这个作品把助手设计成一个清晰的产品形象，让人第一眼就理解它能帮助电脑办公和任务控制。',
+      process: '先确定产品名“杰克”和核心卖点，再用机甲助手、蓝色科技光效、Windows 办公场景构建视觉封面。',
+      result: '完成一张具备产品包装感的 AI 语音助手封面图，可作为产品介绍、短视频封面或作品库入口。',
+      thought: '工具型 AI 产品需要先讲清楚使用场景，再讲技术能力。用户看到“能帮我做什么”，才会继续了解。',
+      next: '继续补充真实功能演示，例如语音打开软件、整理文件、生成文档和执行办公流程。'
+    },
+    {
+      id: 'xingyu-ai-brand-visual-system',
+      name: '星宇科技品牌视觉系统',
+      type: '企业品牌视觉',
+      category: 'visual',
+      date: '2026.08',
+      status: '已完成',
+      level: 'L',
+      orbit: 'o2',
+      position: { left: '34%', top: '104%' },
+      icon: '◈',
+      cover: 'assets/works/xingyu-ai-brand-world.png',
+      images: [
+        'assets/works/xingyu-ai-brand-world.png',
+        'assets/works/xingyu-ai-visual-system.png'
+      ],
+      tools: ['品牌定位', '视觉系统', 'AI视觉生成', '企业VI'],
+      summary: '为“星宇科技 XINGYU AI”打造的企业级品牌世界与视觉语言系统，包含品牌主张、色彩、字体、图形元素和应用延展。',
+      background: '企业 AI 服务需要专业、未来、可靠的品牌识别。单独一个 Logo 不够，需要把品牌故事、视觉语言和应用场景统一起来，才能支撑后续对外展示和商业沟通。',
+      process: '围绕“连接未来智能，创造商业价值”的主张，设计星系、轨道、蓝色科技光效、未来办公空间等视觉元素，并延展到名片、手提袋、工牌、服装和导视。',
+      result: '完成一组完整度较高的品牌视觉提案图，可以作为企业 AI 服务品牌的视觉资产和客户提案样例。',
+      thought: '品牌系统的价值在于一致性。它不是一张好看的图，而是一套能反复用于官网、PPT、物料和案例展示的表达规则。',
+      next: '继续补充 Logo 标准稿、横竖版组合、PPT 模板和企业官网应用页面。'
+    },
+    {
+      id: 'ai-training-service-manual',
+      name: 'AI课程与训练营服务手册',
+      type: 'AI培训服务',
+      category: 'enterprise',
+      date: '2026.08',
+      status: '已完成',
+      level: 'L',
+      orbit: 'o3',
+      position: { left: '58%', top: '104%' },
+      icon: '▣',
+      cover: 'assets/works/ai-training-service-manual-cover.png',
+      images: [
+        'assets/works/ai-training-service-manual-cover.png'
+      ],
+      tools: ['课程体系', '企业内训', 'AI训练营', '服务产品化'],
+      summary: '把个人 AI 成长和企业 AI 落地服务整理成课程与训练营矩阵，形成可对外介绍的服务手册。',
+      background: '当 AI 能力要对外服务时，不能只说“我会做 AI”，而要把能力拆成客户能理解、能购买、能交付的课程与训练营产品。',
+      process: '按企业落地、个体商业系统、个人 AI 工作台、AI 商业实战课四个方向组织课程，并补充课程形式、交付方式和阶段路径。',
+      result: '完成一张课程与训练营总览图，能够展示服务结构、适用对象和商业交付方向。',
+      thought: '服务产品化的关键，是把经验变成路径，把路径变成交付，把交付变成案例。',
+      next: '继续补充每个课程的课时大纲、交付物清单、报价区间和客户案例。'
+    },
+    {
+      id: 'education-guardian-promo-film',
+      name: '《记住，是为了更好的守护》教育宣传片',
+      type: '教育宣传片',
+      category: 'video',
+      date: '2026.08',
+      status: '已完成',
+      level: 'L',
+      orbit: 'o4',
+      position: { left: '82%', top: '102%' },
+      icon: '▶',
+      cover: 'assets/works/ai-training-service-video-cover.png',
+      images: [
+        'assets/works/ai-training-service-video-cover.png'
+      ],
+      video: 'assets/works/education-guardian-promo-film.mp4',
+      tools: ['宣传片剪辑', '教育主题叙事', '视频包装', 'AI辅助成片'],
+      summary: '一条以“记住，是为了更好的守护”为主题的教育宣传片，围绕教育记忆、守护与情感价值展开叙事。',
+      background: '教育宣传片不能只做信息告知，更要让观众感受到被守护、被看见和被记住的情绪价值。这个作品把自然场景、字幕标题和叙事节奏结合起来，形成完整片头和传播语境。',
+      process: '通过素材剪辑、字幕包装、音乐节奏和主题文案组织成片，并将原始 HEVC 视频转成网页兼容的 H.264 版本，方便手机和线上网页播放。',
+      result: '完成一条可在作品库直接点开播放的教育宣传片，适合用于宣传展示、案例介绍和视频创作能力证明。',
+      thought: '视频作品展示的不只是画面，而是选题、节奏、叙事和成片交付能力。',
+      next: '继续补充创作脚本、分镜说明、客户/项目背景和短视频竖版剪辑。'
     }
   ];
 
