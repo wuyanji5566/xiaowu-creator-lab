@@ -553,6 +553,30 @@
       result: '完成一条可在作品库直接点开播放的教育宣传片，适合用于宣传展示、案例介绍和视频创作能力证明。',
       thought: '视频作品展示的不只是画面，而是选题、节奏、叙事和成片交付能力。',
       next: '继续补充创作脚本、分镜说明、客户/项目背景和短视频竖版剪辑。'
+    },
+    {
+      id: 'xiaowu-ai-creator-film',
+      name: '小伍（AI）创作者形象短片',
+      type: '个人AI形象短片',
+      category: 'video',
+      date: '2026.08.07',
+      status: '已完成',
+      level: 'M',
+      orbit: 'o5',
+      position: { left: '92%', top: '104%' },
+      icon: '▶',
+      cover: 'assets/works/todays-work-cover.png',
+      images: [
+        'assets/works/todays-work-cover.png'
+      ],
+      video: 'assets/works/xiaowu-ai-creator-film.mp4',
+      tools: ['AI视频创作', '个人IP包装', '宇宙视觉', '短片剪辑'],
+      summary: '一条围绕“小伍（AI）”个人创作者身份打造的宇宙感形象短片，用视觉叙事强化个人 AI 创造者标签。',
+      background: '个人展示不能只靠文字介绍，也需要有能被快速记住的视觉符号。这个作品把“小伍”和 AI 创作者身份放进宇宙场景里，形成更有记忆点的个人形象表达。',
+      process: '以深空、星河、云端宫殿和开阔入口作为主视觉，配合片头文字和镜头推进，做成一条适合放进作品库和对外展示的短片。',
+      result: '完成一条约 59 秒的个人 AI 创作者形象视频，并转成 H.264 网页兼容版本，手机端也能直接播放。',
+      thought: '个人 IP 的早期重点不是复杂包装，而是持续积累能证明方向、审美和执行力的作品证据。',
+      next: '继续补充口播版、自我介绍版和 15 秒竖屏版，让它能用于朋友圈、视频号和客户展示。'
     }
   ];
 
