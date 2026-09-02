@@ -31,30 +31,6 @@
       next: '持续补充真实作品截图、制作过程、复盘记录，把它从展示站升级为个人创造档案馆。'
     },
     {
-      id: 'creator-archive',
-      name: '创造者档案系统',
-      type: '个人档案',
-      category: 'system',
-      date: '2026.07.07',
-      status: '进行中',
-      level: 'M',
-      orbit: 'o2',
-      position: { left: '66%', top: '20%' },
-      icon: '◎',
-      cover: 'assets/about/photo.png',
-      images: [
-        'assets/about/photo.png'
-      ],
-      link: 'about.html',
-      tools: ['HTML', 'CSS', 'AI协作', '内容整理'],
-      summary: '把个人介绍、创造使命、方向、轨迹整合成长期可展示的创造者档案。',
-      background: '单纯的“关于我”页面不够承载长期成长，需要一个能解释身份、方向和方法的档案结构。',
-      process: '围绕三重身份、创造轨迹、五个创造方向组织内容，让外部观看者快速理解你是谁、在做什么、为什么做。',
-      result: '已完成基础页面，后续需要补充更真实的作品经历和阶段性复盘。',
-      thought: '个人品牌不是一句定位，而是一组持续更新的证据。',
-      next: '每完成一个作品，就反向更新档案页里的经历、方向和能力证明。'
-    },
-    {
       id: 'visual',
       name: 'AI视觉作品集',
       type: 'AI视觉作品',
@@ -577,6 +553,54 @@
       result: '完成一条约 59 秒的个人 AI 创作者形象视频，并转成 H.264 网页兼容版本，手机端也能直接播放。',
       thought: '个人 IP 的早期重点不是复杂包装，而是持续积累能证明方向、审美和执行力的作品证据。',
       next: '继续补充口播版、自我介绍版和 15 秒竖屏版，让它能用于朋友圈、视频号和客户展示。'
+    },
+    {
+      id: 'cross-border-ecommerce-bestseller-video',
+      name: '跨境电商爆款产品视频制作',
+      type: '跨境电商产品视频',
+      category: 'video',
+      date: '2026.09',
+      status: '已完成',
+      level: 'L',
+      orbit: 'o1',
+      position: { left: '18%', top: '118%' },
+      icon: '▶',
+      cover: 'assets/works/cross-border-ecommerce-bestseller-video-cover.webp',
+      images: [
+        'assets/works/cross-border-ecommerce-bestseller-video-cover.webp'
+      ],
+      video: 'assets/works/cross-border-ecommerce-bestseller-video.mp4',
+      tools: ['跨境电商产品表达', 'AI视频创作', '卖点提炼', '视频剪辑'],
+      summary: '围绕跨境电商产品卖点制作爆款方向的视频内容，用画面、节奏和场景强化产品吸引力。',
+      background: '跨境电商产品需要在很短时间内让用户理解产品价值，因此视频不能只展示外观，还要把使用场景、核心卖点和购买理由讲清楚。',
+      process: '先提炼产品卖点，再设计开场吸引、功能展示、场景演示和结尾记忆点，最后完成画面节奏、字幕和音乐的统一。',
+      result: '完成一条可用于跨境电商产品展示和营销测试的视频作品，形成从产品理解到视频交付的完整案例。',
+      thought: '爆款视频不是单纯追求炫技，而是让用户在几秒内看懂产品、产生兴趣，并愿意继续了解。',
+      next: '继续制作不同开场、不同卖点和不同平台比例的版本，测试更适合投放的表达方式。'
+    },
+    {
+      id: 'ai-agent-expert-team',
+      name: 'AI Agent 专家团队',
+      type: 'AI Agent 工作流',
+      category: 'system',
+      date: '2026.09',
+      status: '已完成',
+      level: 'L',
+      orbit: 'o2',
+      position: { left: '74%', top: '118%' },
+      icon: '⬡',
+      cover: 'assets/works/ai-agent-expert-team-cover.webp',
+      images: [
+        'assets/works/ai-agent-expert-team-cover.webp'
+      ],
+      video: 'assets/works/ai-agent-expert-team.mp4',
+      tools: ['Multi-Agent 协作', '专家角色设计', '复杂任务拆解', 'AI工作流'],
+      summary: '让多个 AI 专家 Agent 按照不同职责协作，帮助我拆解、分析和执行复杂任务。',
+      background: '单个 AI 助手适合处理单点问题，但复杂任务往往需要研究、策划、执行和复盘等不同能力。这个作品尝试把这些能力组织成一支 AI 专家团队。',
+      process: '先定义不同专家角色，再设计任务分派、信息传递、结果汇总和人工确认节点，让多个 Agent 围绕一个目标协同工作。',
+      result: '完成一套 AI Agent 专家团队的演示作品，展示从任务拆解到多角色协作执行的基本工作方式。',
+      thought: 'Agent 的价值不只是“会聊天”，而是能承担清晰职责，并在工作流里产生可检查、可复用的结果。',
+      next: '继续接入真实工具调用、任务状态记录、结果回传和项目复盘，让专家团队进入日常工作场景。'
     }
   ];
 
