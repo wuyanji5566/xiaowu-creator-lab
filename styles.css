@@ -208,34 +208,36 @@ svg{display:block}
 .portfolio-bg__shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,8,12,.94) 0%,rgba(5,8,12,.56) 38%,rgba(5,8,12,.18) 75%),linear-gradient(180deg,rgba(5,8,12,.18) 0%,#070b10 90%)}
 .portfolio-field{position:absolute;left:0;top:0;width:100%;height:100vh;z-index:1;pointer-events:none;mix-blend-mode:screen;opacity:.82}
 .has-unicorn .portfolio-bg__image{opacity:.12}
-.has-unicorn .portfolio-bg__shade{background:linear-gradient(90deg,rgba(5,8,12,.72) 0%,rgba(5,8,12,.28) 48%,rgba(5,8,12,.08) 100%),linear-gradient(180deg,rgba(5,8,12,.08) 0%,#070b10 90%)}
+.has-unicorn .portfolio-bg__shade{background:linear-gradient(90deg,rgba(5,8,12,.84) 0%,rgba(5,8,12,.42) 48%,rgba(5,8,12,.14) 100%),linear-gradient(180deg,rgba(5,8,12,.14) 0%,#070b10 90%)}
 .has-unicorn .portfolio-field{opacity:0}
-.portfolio-header{position:relative;z-index:4;max-width:1280px;margin:0 auto;min-height:78px;padding:22px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(224,165,32,.18)}
-.portfolio-brand{display:flex;align-items:center;gap:10px;font-family:var(--font-en);font-size:1rem;letter-spacing:.12em;color:#f2eadc}
-.portfolio-brand__mark{display:inline-grid;place-items:center;width:24px;height:24px;border:1px solid var(--gold-light);color:var(--gold-light);font-family:var(--font-mono);font-size:.72rem}
-.portfolio-nav{display:flex;gap:30px;font-size:.78rem;color:rgba(244,240,231,.62)}
+.portfolio-header{position:relative;z-index:4;max-width:1280px;margin:0 auto;min-height:78px;padding:22px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(224,165,32,.11)}
+.portfolio-brand{display:flex;align-items:center;gap:10px;font-family:var(--font-cn);font-size:.9rem;letter-spacing:.08em;color:#f2eadc}
+.portfolio-brand__mark{display:inline-grid;place-items:center;width:22px;height:22px;border:1px solid rgba(224,165,32,.7);color:var(--gold-light);font-family:var(--font-mono);font-size:.62rem}
+.portfolio-nav{display:flex;gap:34px;font-size:.72rem;color:rgba(244,240,231,.54);letter-spacing:.08em}
 .portfolio-nav a,.portfolio-header__contact,.portfolio-footer a{transition:color .25s ease}
 .portfolio-nav a:hover,.portfolio-header__contact:hover,.portfolio-footer a:hover{color:var(--gold-light)}
 .portfolio-header__contact{font-size:.76rem;color:var(--gold-light);letter-spacing:.08em}
 .portfolio-hero{position:relative;z-index:2;max-width:1280px;min-height:calc(100vh - 78px);margin:0 auto;padding:108px 32px 86px;display:grid;grid-template-columns:minmax(0,1fr) minmax(360px,510px);align-items:center;gap:9vw}
-.portfolio-hero__copy{padding-left:6vw;position:relative;z-index:2}
+.portfolio-hero__copy{padding-left:6vw;position:relative;z-index:2;max-width:620px}
 .portfolio-kicker{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.18em;color:var(--gold-light);text-transform:uppercase}
 .portfolio-kicker span{color:#7db7d1;margin:0 5px}
-.portfolio-hero h1{margin:25px 0 10px;font-size:clamp(4.2rem,8vw,7.6rem);font-weight:500;line-height:.92;letter-spacing:.02em;color:#f8f2e8;white-space:nowrap}
-.portfolio-hero__role{font-size:clamp(1.2rem,2.2vw,1.75rem);color:#d6a351;letter-spacing:.12em}
-.portfolio-hero__intro{margin-top:28px;color:rgba(244,240,231,.7);font-size:1rem;line-height:1.9;max-width:27rem}
-.portfolio-hero__actions{display:flex;align-items:center;gap:28px;margin-top:36px}
-.portfolio-button{display:inline-flex;align-items:center;gap:24px;padding:14px 20px;border:1px solid var(--gold-light);color:#f2d394;font-size:.82rem;letter-spacing:.08em;transition:background .25s ease,color .25s ease,transform .25s ease}
-.portfolio-button:hover{background:var(--gold-light);color:#101016;transform:translateY(-2px)}
+.portfolio-hero h1{margin:25px 0 10px;font-family:"Noto Serif SC","Songti SC","STSong","SimSun",serif;font-size:clamp(4.2rem,8vw,7.6rem);font-weight:600;line-height:.98;letter-spacing:.1em;color:#f5efe4;white-space:nowrap}
+.portfolio-hero__role{font-size:clamp(1.05rem,1.8vw,1.45rem);color:#d5b875;letter-spacing:.16em}
+.portfolio-hero__intro{margin-top:28px;color:rgba(244,240,231,.62);font-size:.92rem;line-height:2;max-width:27rem;letter-spacing:.04em}
+.portfolio-hero__actions{display:flex;align-items:center;gap:30px;margin-top:36px}
+.portfolio-button{position:relative;display:inline-flex;align-items:center;gap:24px;padding:11px 0;border:0;border-bottom:1px solid rgba(224,165,32,.7);color:#e8d39b;background:transparent;font-size:.76rem;letter-spacing:.12em;transition:color .25s ease,border-color .25s ease,transform .25s ease}
+.portfolio-button::after{content:'';position:absolute;right:0;bottom:-2px;width:0;height:2px;background:var(--gold-light);transition:width .35s var(--ease-out)}
+.portfolio-button:hover{color:#fff5d8;border-color:var(--gold-light);background:transparent;transform:translateY(-2px)}
+.portfolio-button:hover::after{width:42%}
 .portfolio-button:active{transform:translateY(1px)}
 .portfolio-button:focus-visible,.portfolio-text-link:focus-visible,.portfolio-nav a:focus-visible,.portfolio-header__contact:focus-visible,.portfolio-footer a:focus-visible{outline:2px solid #83c2dc;outline-offset:5px}
 .portfolio-button span{font-size:1.1rem;line-height:1}
 .portfolio-text-link{display:inline-flex;align-items:center;gap:10px;color:rgba(244,240,231,.65);font-size:.76rem;letter-spacing:.06em;border-bottom:1px solid rgba(224,165,32,.35);padding-bottom:6px;transition:color .25s ease,border-color .25s ease}
 .portfolio-text-link:hover{color:var(--gold-light);border-color:var(--gold-light)}
-.portfolio-hero__portrait{position:relative;margin:0;width:100%;max-width:510px;padding:10px;border:1px solid rgba(224,165,32,.55);background:rgba(8,12,18,.22);box-shadow:22px 22px 0 rgba(4,6,10,.22);translate:var(--hero-portrait-x,0px) var(--hero-portrait-y,0px);will-change:translate}
-.portfolio-hero__portrait::before{content:'';position:absolute;inset:5px;border:1px solid rgba(255,255,255,.08);pointer-events:none}
+.portfolio-hero__portrait{position:relative;margin:0;width:100%;max-width:510px;padding:0 0 0 14px;border-left:1px solid rgba(224,165,32,.42);background:transparent;box-shadow:18px 18px 0 rgba(4,6,10,.16);translate:var(--hero-portrait-x,0px) var(--hero-portrait-y,0px);will-change:translate}
+.portfolio-hero__portrait::before{content:'';position:absolute;left:8px;top:0;width:34%;height:1px;background:rgba(224,165,32,.58);pointer-events:none}
 .portfolio-hero__portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 35%;filter:saturate(.86) contrast(1.04)}
-.portfolio-hero__portrait figcaption{display:flex;justify-content:space-between;padding:10px 2px 0;color:rgba(244,240,231,.5);font: .58rem var(--font-mono);letter-spacing:.12em}
+.portfolio-hero__portrait figcaption{display:flex;justify-content:space-between;padding:10px 2px 0;color:rgba(244,240,231,.42);font: .56rem var(--font-mono);letter-spacing:.14em}
 .portfolio-hero__coordinate{position:absolute;right:18px;top:45%;font: .58rem var(--font-mono);line-height:1.7;letter-spacing:.08em;color:rgba(244,240,231,.38);writing-mode:vertical-rl}
 .portfolio-hero__scroll{position:absolute;left:32px;bottom:30px;font: .6rem var(--font-mono);letter-spacing:.16em;color:rgba(244,240,231,.48);display:flex;gap:16px;align-items:center}
 .portfolio-hero__scroll span{color:var(--gold-light);font-size:1rem}
