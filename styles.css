@@ -221,7 +221,7 @@ svg{display:block}
 .portfolio-hero__copy{padding-left:6vw;position:relative;z-index:2}
 .portfolio-kicker{font-family:var(--font-mono);font-size:.66rem;letter-spacing:.18em;color:var(--gold-light);text-transform:uppercase}
 .portfolio-kicker span{color:#7db7d1;margin:0 5px}
-.portfolio-hero h1{margin:25px 0 10px;font-size:clamp(4.6rem,10vw,9.2rem);font-weight:500;line-height:.92;letter-spacing:.02em;color:#f8f2e8;text-wrap:balance}
+.portfolio-hero h1{margin:25px 0 10px;font-size:clamp(4.2rem,8vw,7.6rem);font-weight:500;line-height:.92;letter-spacing:.02em;color:#f8f2e8;white-space:nowrap}
 .portfolio-hero__role{font-size:clamp(1.2rem,2.2vw,1.75rem);color:#d6a351;letter-spacing:.12em}
 .portfolio-hero__intro{margin-top:28px;color:rgba(244,240,231,.7);font-size:1rem;line-height:1.9;max-width:27rem}
 .portfolio-hero__actions{display:flex;align-items:center;gap:28px;margin-top:36px}
