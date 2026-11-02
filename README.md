@@ -1,108 +1,38 @@
-# 小伍创造者实验室
+# 伍老师｜AI 独立创造者
 
-> One-Man AI Factory · Since 2026.07.07
+这是伍老师个人品牌网站的公开静态版本。页面来自本机 Halo 已发布内容，使用 Render 静态服务发布；仓库地址为 `wuyanji5566/xiaowu-creator-lab`。
 
-这是一个自用的个人 AI 创造档案馆，用来长期展示作品、实验、方法论和成长记录。
+## 页面
 
-技术栈：原生 HTML + CSS + JavaScript，零框架，零构建步骤。
+首页、作品与分类分页、项目案例、方法、服务、关于、动态、联系、归档及作品详情。内容以真实素材和已公开资料为准。微信二维码是联系入口；客户与学员案例按现有匿名规则展示。
 
-## 本地预览
+## 本地查看
 
-在 PowerShell 里执行：
+在 PowerShell 中执行：
 
-```bash
-cd "D:\小伍创造者实验室"
-python -m http.server 5173
+```powershell
+cd "D:\伍老师个人网站优化\github-publish"
+python -m http.server 5173 --bind 127.0.0.1
 ```
 
-打开：
+打开 <http://127.0.0.1:5173/>。页面无需前端构建工具。
 
-```text
-http://localhost:5173
+## 更新内容
+
+本仓库是公开快照。先在本机 Halo 后台更新并发布，再运行导出脚本。导出前确认 Docker 中的 Halo 正在 `http://127.0.0.1:8090/` 运行。
+
+```powershell
+cd "D:\伍老师个人网站优化\github-publish"
+python tools/export_halo_static.py .
+python tools/verify_static_export.py .
 ```
 
-## 文件结构
+导出脚本只读取 Halo 公开页面，不读取后台凭据、数据库或未发布草稿。它从站点地图和公开链接收集页面，并下载页面用到的图片、视频、字体、样式和脚本。发布前检查本次改动，然后提交并推送 GitHub；Render 将按 `render.yaml` 发布静态站。
 
-```text
-/
-├── index.html        # 首页：创造基地入口 + 当前状态
-├── about.html        # 创造者档案
-├── experiment.html   # 100 天 AI 创造实验时间线
-├── works.html        # 作品星库：由 works-data.js 自动渲染
-├── enterprise.html   # 企业 AI 实验方向
-├── products.html     # AI 产品实验方向
-├── system.html       # 创造方法论
-├── styles.css        # 全站样式
-├── script.js         # 粒子系统、首页统计、作品页交互
-├── works-data.js     # 作品数据；以后新增作品优先改这里
-└── assets/           # 背景、头像、作品素材
-```
+Halo 后台的新增内容不会自动同步到此仓库，需要重新导出。独立的 Halo 主题源码与本地运行配置保存在本机 `D:\伍老师个人网站优化`。
 
-## 如何新增一个作品
+## 部署
 
-优先修改 `works-data.js`。
+`render.yaml` 使用 `runtime: static`，发布仓库根目录。站内链接指向导出的 `.html` 页面；`sitemap.xml` 和 `robots.txt` 指向 [公开地址](https://xiaowu-creator-lab.onrender.com/)。
 
-复制 `window.CREATION_WORKS` 里的任意一个作品对象，改这些字段：
-
-- `id`：英文唯一标识，比如 `my-first-ai-tool`
-- `name`：作品名
-- `type`：作品类型
-- `category`：分类，例如 `web`、`visual`、`video`、`product`
-- `date`：日期或“持续更新”
-- `status`：只能用 `已完成`、`进行中`、`计划中`
-- `summary`：一句话说明
-- `cover`：作品封面图路径，例如 `assets/works/my-work-cover.jpg`
-- `images`：详情页多张截图路径
-- `video`：本地 MP4 视频路径，例如 `assets/works/my-work-demo.mp4`
-- `link`：作品链接，可以是站内页面或外部网址
-- `tools`：用过的工具列表
-- `background`、`process`、`result`、`thought`、`next`：详情弹窗内容
-
-保存后刷新 `works.html`，作品星球、作品卡片、筛选和详情会自动更新。
-
-## 作品图片放哪里
-
-把作品封面图和截图放到：
-
-```text
-assets/works/
-```
-
-推荐命名：
-
-```text
-assets/works/my-work-cover.jpg
-assets/works/my-work-01.jpg
-assets/works/my-work-02.jpg
-```
-
-然后在 `works-data.js` 里这样写：
-
-```js
-cover: 'assets/works/my-work-cover.jpg',
-images: [
-  'assets/works/my-work-01.jpg',
-  'assets/works/my-work-02.jpg'
-],
-video: 'assets/works/my-work-demo.mp4',
-link: 'https://example.com'
-```
-
-视频建议使用 MP4 格式。文件太大会影响加载速度，展示用短视频建议控制在 30-90 秒。
-
-## 当前设计原则
-
-- 这是长期展示基地，不是销售官网。
-- 首页承担“基地控制台”作用：让人知道当前实验进度。
-- 作品页承担“档案库”作用：每个作品都要有背景、过程、成果、思考和下一步。
-- 不追求一次做大，先持续积累真实作品。
-
-## 下一步建议
-
-每完成一个作品，就补充：
-
-- 一张截图或封面图
-- 为什么做
-- 用了哪些 AI 工具
-- 做出来了什么
-- 学到了什么
+旧的 `enterprise.html`、`products.html`、`system.html` 提供到新版服务、作品和方法页的跳转，便于保留已有分享链接。

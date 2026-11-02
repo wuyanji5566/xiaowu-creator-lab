@@ -2,90 +2,142 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="伍老师个人作品库，记录 AI 网页、AI 视觉、AI 视频、企业 AI 样品和产品实验。">
-  <title>作品库 · 伍老师个人作品集</title>
-  <link rel="icon" href="assets/lab-bg.jpg">
-  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>作品中心｜伍老师</title>
+
+  <meta name="theme-color" content="#090e15">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="作品档案">
+  <meta property="og:description" content="从真实问题出发，用 AI 把想法做成作品、产品与可用的工作流。">
+  <meta property="og:image" content="https://xiaowu-creator-lab.onrender.com/themes/theme-wulaoshi/assets/media/portrait.webp">
+  <link rel="canonical" href="https://xiaowu-creator-lab.onrender.com/works.html">
+  <meta property="og:url" content="https://xiaowu-creator-lab.onrender.com/works.html">
+  <link rel="icon" href="/themes/theme-wulaoshi/assets/media/portrait.webp">
+  <link rel="stylesheet" href="/themes/theme-wulaoshi/assets/site.css">
+  <link rel="stylesheet" href="/themes/theme-wulaoshi/assets/home-a-base.css">
+  <link rel="stylesheet" href="/themes/theme-wulaoshi/assets/home-a.css">
+  <link rel="stylesheet" href="/themes/theme-wulaoshi/assets/pages-editorial.css">
+  <link rel="stylesheet" href="/themes/theme-wulaoshi/assets/cinema-studio.css">
+  <link rel="stylesheet" href="/themes/theme-wulaoshi/assets/portfolio-editorial.css">
+  <link rel="stylesheet" href="/themes/theme-wulaoshi/assets/studio-motion.css">
+  <script defer src="/themes/theme-wulaoshi/assets/site.js"></script>
+  <script defer src="/themes/theme-wulaoshi/assets/home-a.js"></script>
+  <script defer src="/themes/theme-wulaoshi/assets/works-drag.js"></script>
+  <script defer src="/themes/theme-wulaoshi/assets/studio-motion.js"></script>
+
+<meta name="generator" content="Halo 2.27.1"/><meta name="description" content=""/>
+
+
+
+
 </head>
-<body class="body--works">
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header container">
+    <a class="wordmark" href="/index.html">伍老师</a>
+    <details class="navigation" id="navigation" open>
+      <summary>导航</summary>
+      <nav aria-label="主导航">
+        <a href="/categories/works.html">作品</a><a href="/cases.html">案例</a><a href="/methods.html">方法</a><a href="/services.html">合作</a><a href="/about.html">关于</a>
 
-  <canvas class="star-dust" id="starDust" aria-hidden="true"></canvas>
-  <div class="secondary-unicorn" aria-hidden="true"><div class="secondary-unicorn__scene" data-us-project="IHpEmH9hk2gzQoJ7nbkI"></div></div>
-
-  <nav class="nav">
-    <a href="index.html" class="nav__link">← 返回首页</a>
-  </nav>
-
-  <header class="page-header">
-    <h1 class="page-header__title">作品星库</h1>
-    <p class="page-header__sub">每一个作品，都是一颗被点亮的创造星球。这里记录我用 AI 做过、正在做、准备做的东西。</p>
+      </nav>
+    </details>
+    <a class="header-contact" href="/contact.html">讨论项目</a>
   </header>
+  <main id="main" class="container listing-main"><header class="page-heading"><h1>作品档案</h1><p>影像、网站与工作流。每一份档案，都说明做了什么、做到了哪一步。</p></header><nav class="filters" aria-label="作品分类"><a href="/categories/works.html">全部作品</a><a href="/categories/web.html">网站与产品</a><a href="/categories/visual.html">AIGC 视觉</a><a href="/categories/video.html">视频与短片</a><a href="/categories/workflow.html">工作流与教学</a><a href="/tags/commercial-anonymous.html">企业项目（匿名）</a><a href="/tags/student-anonymous.html">学员实践</a></nav><h2 class="sr-only">作品列表</h2><div class="archive-grid"><article class="project project--film">
+    <a href="/archives/work-xiaowu-ai-creator-film.html" class="project-image" aria-label="查看作品：小伍（AI）创作者形象短片">
+      <img src="/upload/todays-work-cover.png" alt="小伍（AI）创作者形象短片" loading="lazy" decoding="async" width="800" height="520" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/todays-work-cover.png 1600w, /upload/todays-work-cover.png 800w, /upload/todays-work-cover.png 1200w, /upload/todays-work-cover.png 400w">
 
-  <main>
-    <section class="section section--compact">
-      <div class="section__container">
-        <div class="archive-dashboard reveal">
-          <div>
-            <span class="archive-dashboard__eyebrow">Creation Archive</span>
-            <h2>长期更新的 AI 创造档案</h2>
-            <p>这个页面已经从手写作品墙升级为数据驱动。以后新增作品，优先修改 <code>works-data.js</code>。</p>
-          </div>
-          <div class="archive-dashboard__stats" id="archiveStats"></div>
-        </div>
-
-        <div class="archive-filters reveal" aria-label="作品筛选">
-          <button class="archive-filter archive-filter--active" type="button" data-filter="all">全部</button>
-          <button class="archive-filter" type="button" data-filter="已完成">已完成</button>
-          <button class="archive-filter" type="button" data-filter="进行中">进行中</button>
-          <button class="archive-filter" type="button" data-filter="计划中">计划中</button>
-        </div>
-
-        <div class="works-cat reveal">
-          <h3 class="works-cat__title"><span class="works-cat__icon">◈</span> 作品档案</h3>
-          <div class="works-grid works-grid--archive" id="worksArchive"></div>
-        </div>
-
-        <div class="star-gallery reveal" id="starGallery">
-          <svg class="star-gallery__orbits" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-            <ellipse cx="50" cy="45" rx="26" ry="18" fill="none" stroke="rgba(201,133,0,0.06)" stroke-width="0.07"/>
-            <ellipse cx="50" cy="45" rx="38" ry="26" fill="none" stroke="rgba(201,133,0,0.04)" stroke-width="0.05" stroke-dasharray="0.5 1.5"/>
-            <ellipse cx="50" cy="45" rx="48" ry="32" fill="none" stroke="rgba(57,135,229,0.03)" stroke-width="0.04" stroke-dasharray="0.3 2"/>
-          </svg>
-
-          <div class="sg-core">
-            <div class="sg-core__body"></div>
-            <div class="sg-core__label">小伍创造核心</div>
-            <div class="sg-core__sub">Creation Core</div>
-          </div>
-
-          <div id="planetLayer"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <div class="sg-detail" id="sgDetail" aria-hidden="true">
-    <div class="sg-detail__panel" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
-      <div class="sg-detail__head">
-        <h2 class="sg-detail__title" id="detailTitle"></h2>
-        <button class="sg-detail__back" type="button" id="detailClose">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M13 7H1M5 2L1 7l4 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          返回星库
-        </button>
-      </div>
-      <div class="sg-detail__scroll" id="detailScroll"></div>
-    </div>
-  </div>
-
-  <div class="back-top">
-    <a href="index.html" class="back-top__link">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M14 8H2M7 3l-5 5 5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <span>返回首页</span>
     </a>
-  </div>
 
-  <script src="works-data.js?v=20260902-2"></script>
-  <script src="script.js"></script>
+    <button class="work-drag-handle" type="button" hidden aria-label="拖动作品卡片；方向键移动，Escape 复位" title="拖动卡片"><span aria-hidden="true">⠿</span> 拖动</button>
+
+    <h3><a href="/archives/work-xiaowu-ai-creator-film.html">小伍（AI）创作者形象短片</a></h3>
+    <div class="project-meta"><span>已完成</span><span>影像作品</span></div>
+    <p class="project-summary">现有本地视频文件，可播放展示。它证明已有影像产出；客户委托、验收、授权范围及商业效果尚未核验。</p>
+  </article><article class="project project--film">
+    <a href="/archives/work-education-guardian-promo-film.html" class="project-image" aria-label="查看作品：《记住，是为了更好的守护》教育宣传片">
+      <img src="/upload/ai-training-service-video-cover.png" alt="《记住，是为了更好的守护》教育宣传片" loading="lazy" decoding="async" width="800" height="520" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/ai-training-service-video-cover.png 1600w, /upload/ai-training-service-video-cover.png 800w, /upload/ai-training-service-video-cover.png 1200w, /upload/ai-training-service-video-cover.png 400w">
+
+    </a>
+
+    <button class="work-drag-handle" type="button" hidden aria-label="拖动作品卡片；方向键移动，Escape 复位" title="拖动卡片"><span aria-hidden="true">⠿</span> 拖动</button>
+
+    <h3><a href="/archives/work-education-guardian-promo-film.html">《记住，是为了更好的守护》教育宣传片</a></h3>
+    <div class="project-meta"><span>已完成</span><span>影像作品</span></div>
+    <p class="project-summary">现有本地视频文件，可播放展示。它证明已有影像产出；客户委托、验收、授权范围及商业效果尚未核验。</p>
+  </article><article class="project project--interface">
+    <a href="/archives/work-cora-creator-business-os.html" class="project-image" aria-label="查看作品：CORA 创作者商业系统网页">
+      <img src="/upload/cora-creator-business-os-cover.png" alt="CORA 创作者商业系统网页" loading="lazy" decoding="async" width="800" height="520" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/cora-creator-business-os-cover.png 1600w, /upload/cora-creator-business-os-cover.png 800w, /upload/cora-creator-business-os-cover.png 1200w, /upload/cora-creator-business-os-cover.png 400w">
+
+    </a>
+
+    <button class="work-drag-handle" type="button" hidden aria-label="拖动作品卡片；方向键移动，Escape 复位" title="拖动卡片"><span aria-hidden="true">⠿</span> 拖动</button>
+
+    <h3><a href="/archives/work-cora-creator-business-os.html">CORA 创作者商业系统网页</a></h3>
+    <div class="project-meta"><span>已完成</span><span>演示原型</span></div>
+    <p class="project-summary">创作者商业系统的网页演示原型，展示界面与操作流程。</p>
+  </article><article class="project project--visual">
+    <a href="/archives/work-xingyu-ai-brand-visual-system.html" class="project-image" aria-label="查看作品：科技品牌视觉提案">
+      <img src="/upload/xingyu-ai-brand-world.png" alt="科技品牌视觉提案" loading="lazy" decoding="async" width="800" height="520" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/xingyu-ai-brand-world.png 1600w, /upload/xingyu-ai-brand-world.png 800w, /upload/xingyu-ai-brand-world.png 1200w, /upload/xingyu-ai-brand-world.png 400w">
+
+    </a>
+
+    <button class="work-drag-handle" type="button" hidden aria-label="拖动作品卡片；方向键移动，Escape 复位" title="拖动卡片"><span aria-hidden="true">⠿</span> 拖动</button>
+
+    <h3><a href="/archives/work-xingyu-ai-brand-visual-system.html">科技品牌视觉提案</a></h3>
+    <div class="project-meta"><span>已完成</span><span>视觉概念</span></div>
+    <p class="project-summary">现有静态视觉图，作为概念或界面样品展示；不证明可运行功能、实际系统交付或商业效果。</p>
+  </article><article class="project project--film">
+    <a href="/archives/work-speaker-product-promo-film.html" class="project-image" aria-label="查看作品：音响产品营销宣传片">
+      <img src="/upload/speaker-product-promo-film-cover.png" alt="音响产品营销宣传片" loading="lazy" decoding="async" width="800" height="520" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/speaker-product-promo-film-cover.png 1600w, /upload/speaker-product-promo-film-cover.png 800w, /upload/speaker-product-promo-film-cover.png 1200w, /upload/speaker-product-promo-film-cover.png 400w">
+
+    </a>
+
+    <button class="work-drag-handle" type="button" hidden aria-label="拖动作品卡片；方向键移动，Escape 复位" title="拖动卡片"><span aria-hidden="true">⠿</span> 拖动</button>
+
+    <h3><a href="/archives/work-speaker-product-promo-film.html">音响产品营销宣传片</a></h3>
+    <div class="project-meta"><span>已完成</span><span>影像作品</span></div>
+    <p class="project-summary">围绕音响产品制作的营销影像样片；查看现有视频与素材记录。</p>
+  </article><article class="project project--film">
+    <a href="/archives/work-waterproof-wood-product-film.html" class="project-image" aria-label="查看作品：防水木材产品演示片">
+      <img src="/upload/waterproof-wood-product-film-cover.png" alt="防水木材产品演示片" loading="lazy" decoding="async" width="800" height="520" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/waterproof-wood-product-film-cover.png 1600w, /upload/waterproof-wood-product-film-cover.png 800w, /upload/waterproof-wood-product-film-cover.png 1200w, /upload/waterproof-wood-product-film-cover.png 400w">
+
+    </a>
+
+    <button class="work-drag-handle" type="button" hidden aria-label="拖动作品卡片；方向键移动，Escape 复位" title="拖动卡片"><span aria-hidden="true">⠿</span> 拖动</button>
+
+    <h3><a href="/archives/work-waterproof-wood-product-film.html">防水木材产品演示片</a></h3>
+    <div class="project-meta"><span>已完成</span><span>影像作品</span></div>
+    <p class="project-summary">现有本地视频文件，可播放展示。它证明已有影像产出；客户委托、验收、授权范围及商业效果尚未核验。</p>
+  </article><article class="project project--film">
+    <a href="/archives/incoming-video-1000043615.html" class="project-image" aria-label="查看作品：奇幻旅程影像｜光石与山海">
+      <img src="/upload/1000043615-cover.jpg" alt="奇幻旅程影像｜光石与山海" loading="lazy" decoding="async" width="800" height="520" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/1000043615-cover.jpg 1600w, /upload/1000043615-cover.jpg 800w, /upload/1000043615-cover.jpg 1200w, /upload/1000043615-cover.jpg 400w">
+
+    </a>
+
+    <button class="work-drag-handle" type="button" hidden aria-label="拖动作品卡片；方向键移动，Escape 复位" title="拖动卡片"><span aria-hidden="true">⠿</span> 拖动</button>
+
+    <h3><a href="/archives/incoming-video-1000043615.html">奇幻旅程影像｜光石与山海</a></h3>
+    <div class="project-meta"><span>影像作品</span></div>
+    <p class="project-summary">围绕发光物件、山海空间与人物行进构成的奇幻旅程影像。</p>
+  </article><article class="project project--film">
+    <a href="/archives/incoming-video-1000045456.html" class="project-image" aria-label="查看作品：舞狮主题影像｜东方节庆想象">
+      <img src="/upload/1000045456-cover.jpg" alt="舞狮主题影像｜东方节庆想象" loading="lazy" decoding="async" width="800" height="520" sizes="(max-width: 640px) 94vw, (max-width: 768px) 92vw, (max-width: 1024px) 88vw, min(800px, 85vw)" srcset="/upload/1000045456-cover.jpg 1600w, /upload/1000045456-cover.jpg 800w, /upload/1000045456-cover.jpg 1200w, /upload/1000045456-cover.jpg 400w">
+
+    </a>
+
+    <button class="work-drag-handle" type="button" hidden aria-label="拖动作品卡片；方向键移动，Escape 复位" title="拖动卡片"><span aria-hidden="true">⠿</span> 拖动</button>
+
+    <h3><a href="/archives/incoming-video-1000045456.html">舞狮主题影像｜东方节庆想象</a></h3>
+    <div class="project-meta"><span>影像作品</span></div>
+    <p class="project-summary">以舞狮形象、节庆场景和人物镜头组成的东方题材影像。</p>
+  </article></div><div class="archive-more"><a class="button" href="/categories/works.html">浏览完整作品档案</a></div></main>
+  <footer class="site-footer container">
+    <div class="footer-top"><a class="footer-name" href="/index.html">伍老师</a><p>每一个作品，都是一次具体问题的回答。</p></div>
+    <div class="footer-bottom"><p>AI 独立创造者</p><nav aria-label="页脚导航"><a href="/categories/notes.html">创作记录</a><a href="/experiment.html">100 天实验</a><a href="/contact.html">联系</a><a href="/sitemap.xml">站点地图</a></nav><p>内容定期更新</p></div>
+
+  </footer>
+  <dialog class="lightbox" id="lightbox" aria-label="图片预览"><button type="button" class="lightbox-close" aria-label="关闭图片预览">关闭</button></dialog>
 </body>
 </html>
