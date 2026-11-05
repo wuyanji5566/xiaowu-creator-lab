@@ -13,19 +13,65 @@
   const dialog = document.getElementById('lightbox');
   let trigger;
   if (dialog && typeof dialog.showModal === 'function') {
+    const galleryLinks = [...document.querySelectorAll('a[data-feedback-gallery]')];
+    let galleryIndex = -1;
+    let galleryControls;
+    let zoomButton;
+    const showImage = link => {
+      let image = dialog.querySelector('img');
+      if (!image) { image = new Image(); dialog.querySelector('.lightbox-close').after(image); }
+      image.classList.remove('is-zoomed');
+      if (zoomButton) { zoomButton.textContent = '放大'; zoomButton.setAttribute('aria-pressed', 'false'); }
+      let error = dialog.querySelector('.lightbox-image-error');
+      if (!error) { error = document.createElement('p'); error.className = 'media-error lightbox-image-error'; dialog.append(error); }
+      error.hidden = true;
+      image.onload = () => { error.hidden = true; };
+      image.onerror = () => { error.textContent = '图片暂时无法加载，请关闭预览后重试。'; error.hidden = false; };
+      image.alt = link.querySelector('img')?.alt || '图片预览';
+      image.src = link.href;
+    };
+    const moveGallery = step => {
+      if (galleryIndex < 0 || !galleryLinks.length) return;
+      galleryIndex = (galleryIndex + step + galleryLinks.length) % galleryLinks.length;
+      showImage(galleryLinks[galleryIndex]);
+    };
+    const ensureGalleryControls = () => {
+      if (galleryControls) return;
+      galleryControls = document.createElement('div');
+      galleryControls.className = 'feedback-gallery-controls';
+      const previous = document.createElement('button');
+      previous.type = 'button'; previous.textContent = '← 上一张'; previous.setAttribute('aria-label', '查看上一张反馈截图');
+      const next = document.createElement('button');
+      next.type = 'button'; next.textContent = '下一张 →'; next.setAttribute('aria-label', '查看下一张反馈截图');
+      zoomButton = document.createElement('button');
+      zoomButton.type = 'button'; zoomButton.textContent = '放大'; zoomButton.setAttribute('aria-pressed', 'false');
+      previous.addEventListener('click', () => moveGallery(-1));
+      next.addEventListener('click', () => moveGallery(1));
+      zoomButton.addEventListener('click', () => {
+        const enlarged = dialog.querySelector('img')?.classList.toggle('is-zoomed');
+        zoomButton.textContent = enlarged ? '缩小' : '放大';
+        zoomButton.setAttribute('aria-pressed', String(Boolean(enlarged)));
+      });
+      galleryControls.append(previous, zoomButton, next); dialog.append(galleryControls);
+    };
     document.addEventListener('click', event => {
       const link = event.target.closest('a[data-lightbox]');
       if (!link) return;
       event.preventDefault(); trigger = link;
-      let image = dialog.querySelector('img');
-      if (!image) { image = new Image(); dialog.append(image); }
-      image.src = link.href;
-      image.alt = link.querySelector('img')?.alt || '图片预览'; dialog.showModal();
+      galleryIndex = galleryLinks.indexOf(link);
+      if (galleryIndex >= 0) ensureGalleryControls();
+      if (galleryControls) galleryControls.hidden = galleryIndex < 0;
+      showImage(link); dialog.showModal();
     });
     dialog.querySelector('button').addEventListener('click', () => dialog.close());
     dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
-    document.addEventListener('keydown', event => { if (event.key === 'Escape' && dialog.open) dialog.close(); });
-    dialog.addEventListener('close', () => { dialog.querySelector('img')?.remove(); trigger?.focus(); });
+    document.addEventListener('keydown', event => {
+      if (!dialog.open) return;
+      if (event.key === 'Escape') dialog.close();
+      if (event.key === 'ArrowLeft') moveGallery(-1);
+      if (event.key === 'ArrowRight') moveGallery(1);
+    });
+    dialog.addEventListener('close', () => { dialog.querySelector('img')?.remove(); galleryIndex = -1; trigger?.focus(); });
   }
   document.querySelectorAll('.prose img:not([data-no-lightbox])').forEach(image => {
     if (image.closest('a')) return;
