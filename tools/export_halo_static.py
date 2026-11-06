@@ -109,6 +109,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("output", type=Path)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--replace-home", action="store_true", help="Also replace the custom public homepage with Halo's homepage")
     args = parser.parse_args()
     xml = ET.fromstring(request(BASE + "/sitemap.xml"))
     seeds = {urllib.parse.urlparse(node.text or "").path or "/" for node in xml.findall(".//{*}loc")}
@@ -143,6 +144,9 @@ def main():
     args.output.mkdir(parents=True, exist_ok=True)
     for path, html in pages.items():
         target = args.output / output_page(path)
+        if path == "/" and target.exists() and not args.replace_home:
+            print("Preserved custom homepage: index.html")
+            continue
         target.parent.mkdir(parents=True, exist_ok=True)
         normalized = rewrite(html, BASE + path).replace("\r\n", "\n").replace("\r", "\n")
         normalized = re.sub(r"[ \t]+(?=\n|$)", "", normalized)
@@ -150,7 +154,7 @@ def main():
         target.write_text(normalized, encoding="utf-8", newline="\n")
     urlset = ET.Element("urlset", xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
     for path in sorted(pages):
-        ET.SubElement(ET.SubElement(urlset, "url"), "loc").text = PUBLIC + "/" + output_page(path).as_posix()
+        ET.SubElement(ET.SubElement(urlset, "url"), "loc").text = PUBLIC + ("/" if path == "/" else "/" + output_page(path).as_posix())
     (args.output / "sitemap.xml").write_bytes(ET.tostring(urlset, encoding="utf-8", xml_declaration=True))
     (args.output / "robots.txt").write_text("User-agent: *\nAllow: /\nSitemap: " + PUBLIC + "/sitemap.xml\n", encoding="utf-8")
     for old, new in LEGACY_REDIRECTS.items():

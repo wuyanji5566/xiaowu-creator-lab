@@ -1,10 +1,10 @@
 # Project Notes
 
-本项目是伍老师个人品牌网站的公开静态快照。页面视觉以本机 Halo 主题 1.3.12 为准，内容从已发布页面导出；仓库通过 Render 静态服务发布。
+本项目是伍老师个人品牌网站的公开静态站。自定义首页在 `index.html`、`direction-b.css`、`direction-b.js` 和 `assets/direction-b/`；其他页面以本机 Halo 已发布内容为来源，通过 Render 静态服务发布。
 
 ## Editing Rules
 
-- 保持静态站结构，页面内容从本机 Halo 已发布页面导出；维护步骤见 `README.md`。
+- 保持静态站结构；首页单独维护，其他页面从本机 Halo 已发布内容导出。维护步骤见 `README.md`。
 - 不直接手改导出的作品正文；先在 Halo 后台更新，再运行 `tools/export_halo_static.py`。
 - 保持暖纸、墨色、真实作品影像和编辑式排版，不回退到旧的宇宙实验室首页。
 - 客户与学员案例继续匿名；作品状态和交付边界必须以真实素材为依据。
