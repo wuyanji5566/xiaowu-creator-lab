@@ -34,3 +34,17 @@ dialog{border:1px solid #d7ccbb;max-width:min(92vw,500px);background:var(--paper
 #feedback-dialog button:hover{background:#4b3932}#feedback-dialog img{width:auto;max-width:100%;height:auto;max-height:none;margin:auto;object-fit:contain}
 @media(max-width:760px){.feedback-section{padding-top:85px;padding-bottom:90px}.feedback-gallery{display:block}.feedback-item{margin-bottom:36px}.feedback-item figcaption{font-size:12px}.feedback-note{font-size:12px}#feedback-dialog{padding:10px}#feedback-dialog .feedback-dialog-bar{top:-10px;flex-wrap:wrap}#feedback-dialog button{padding:8px;font-size:12px}}
 @media(prefers-reduced-motion:reduce){.feedback-item img{transition:none}}
+.service-list>div p b{font-weight:700;color:#e4ddd2}
+.service-detail-link{margin-top:30px;text-align:right}
+.faq-section{padding-top:120px;padding-bottom:130px;background:#eae4da;color:#1c1a18}
+.faq-section .eyebrow{color:var(--rust)}
+.faq-section .section-heading>p{color:#5d5852}
+.faq-list{border-top:1px solid #b6aa9e}
+.faq-list details{border-bottom:1px solid #b6aa9e}
+.faq-list summary{list-style:none;cursor:pointer;position:relative;padding:24px 50px 24px 0;font-size:clamp(18px,2vw,24px);font-weight:700}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary:after{content:'+';position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:25px;color:var(--rust)}
+.faq-list details[open] summary:after{content:'−'}
+.faq-list details p{max-width:820px;padding:0 40px 24px 0;color:#514d47;font-size:16px}
+.faq-contact{margin-top:34px;color:#201d1a}
+@media(max-width:760px){.faq-section{padding-top:88px;padding-bottom:95px}.faq-list summary{padding:19px 38px 19px 0;font-size:18px}.faq-list details p{font-size:15px;padding-right:8px}.service-detail-link{text-align:left}}
